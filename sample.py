@@ -8,3 +8,6 @@ open('/home/tester')
 
 class outOfScope():
     hash = "/home/tester"
+
+
+# some text
