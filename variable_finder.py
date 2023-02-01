@@ -4,7 +4,6 @@ import re
 
 
 def findVars(file_name):
-    # Get the output of the `git diff` command
     diff_output = subprocess.run(
         ['git', 'diff', 'HEAD', file_name], capture_output=True, text=True).stdout
     print(diff_output)
