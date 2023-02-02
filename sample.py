@@ -1,16 +1,17 @@
 
 if true:
-    images_dir = "/home/tester/images/"
+    images_dir2 = "/home/tester/images/"
 
 
-open('/home/tester')
+a.open('/home/tester')
 
 
 class outOfScope():
     hash = "/home/tester"
 
 
-images_dir2 = "/home/tester\
+def func():
+    images_dir2 = "/home/tester\
     \
     \
     "
