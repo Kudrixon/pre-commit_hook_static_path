@@ -14,5 +14,5 @@ repos:
   rev: v1.0.0
   hooks:
     - id: check-static-path
-      args: ["/home/tester]
+      args: ["/home/tester"]
 ```
