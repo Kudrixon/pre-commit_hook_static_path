@@ -1,7 +1,3 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
-setup(
-    name='check-static-path',
-    version='1.0.4',
-    packages=find_packages(include=['check-static-path', 'check-static-path.*'])
-)
+setup(name="pre_commit_hooks", packages=find_packages())
