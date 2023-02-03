@@ -10,8 +10,9 @@ alochomora('/home/tester')
 
 class outOfScope():
     hash1 = "/home/tester"
+"/home/tester"
 
-
+new("/home/tester")
 def func():
     images_dir3 = "/home/tester\
     \
