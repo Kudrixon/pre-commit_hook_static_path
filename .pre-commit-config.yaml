@@ -1,6 +1,6 @@
 repos:
 - repo: https://github.com/Kudrixon/pre-commit_hook_static_path
-  rev: v1.0.1
+  rev: v1.0.4
   hooks:
     - id: check-static-path
       args: ["/home/tester"]
