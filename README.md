@@ -2,7 +2,7 @@
 
 Pre-commit hook based on https://pre-commit.com.
 
-## Use-Case: Need to exclude commiting specific string from codebase
+## Use-Case: Need to exclude spefific string from commiting to codebase
 
 ### Sample Usage
 
