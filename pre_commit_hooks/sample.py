@@ -24,3 +24,6 @@ oew("/home/vtest")
 moew("/home/vtest")
 
 costam("home/vtest")
+
+
+nowalinia("/home/vtest")
