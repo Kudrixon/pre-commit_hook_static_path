@@ -18,3 +18,6 @@ def func():
     \
     \
     "
+
+
+new("/home/vtest")
