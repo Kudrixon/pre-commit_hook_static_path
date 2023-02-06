@@ -63,6 +63,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     retval = 0
 
+    print(args.keyword)
     # if(args.keyword) {
 
     # }
