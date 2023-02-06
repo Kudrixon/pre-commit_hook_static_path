@@ -1,4 +1,4 @@
-# pre-commit-check 
+# Pre-commit-check: Check static paths/strings 
 
 Pre-commit hook based on https://pre-commit.com.
 
@@ -45,14 +45,13 @@ dynamic needed
 
 Expected output no-diff mode if string exists:
 ```
-pre-commit run check-static-path
+pre-commit run --files .\pre_commit_hooks\sample.py  
 check static path........................................................Failed
 - hook id: check-static-path
-- duration: 0.54s
+- duration: 0.22s
 - exit code: 1
 
-Static path of /home/vtest detected in file pre_commit_hooks/sample.py, line 33 content: kualalumpur("/home/vtest"), change to 
-dynamic needed
+Specified keyword: /home/vtest detected in file pre_commit_hooks/sample.py, line 0 content: kualalumpur("/home/vtest")
 ```
 
 
