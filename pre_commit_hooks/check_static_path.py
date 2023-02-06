@@ -56,12 +56,17 @@ def findStringInFile(filename, keyword):
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*')
-    parser.add_argument('-k', '--keyword', default='/home/vtest', help="Static string excluded in commiting")
+    parser.add_argument('-k', '--keyword', help="Static string excluded in commiting")
     args = parser.parse_args(argv)
 
     print(args.filenames)
 
     retval = 0
+
+    # if(args.keyword) {
+
+    # }
+
     for filename in args.filenames:
         try:
             findStringInFile(filename, args.keyword)
