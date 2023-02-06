@@ -59,6 +59,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument('-k', '--keyword', default='/home/vtest', help="Static string excluded in commiting")
     args = parser.parse_args(argv)
 
+    print(args.filenames)
+
     retval = 0
     for filename in args.filenames:
         try:

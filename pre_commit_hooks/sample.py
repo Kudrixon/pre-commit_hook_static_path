@@ -20,4 +20,5 @@ def func():
     "
 
 
-nsew("/home/vtest")
+oew("/home/vtest")
+moew("/home/vtest")
