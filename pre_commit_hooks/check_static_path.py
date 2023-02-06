@@ -56,8 +56,8 @@ def findStringInFile(filename, keyword):
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*')
-    parser.add_argument('-k', '--keyword', help='Static string excluded in commiting')
-    parser.add_argument('-nd', '--nodiff', default="false", help='If you need to check just specified file select true')
+    parser.add_argument('-k', '--keyword', help='Static string excluded in commiting', required=True)
+    parser.add_argument('-nd', '--nodiff', default="false", choices=['true', 'false'], help='If you need to check just specified file select true')
 
     args = parser.parse_args(argv)
 
@@ -71,11 +71,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         results = findStringInRange(filenames, args.keyword)
         for r in results:
             print(f"Static path of {args.keyword} detected in file {r[0]}, line {r[1]} content: {r[2]}, change to dynamic needed")
+            retval = 1
 
-    elif(args.nodiff == "true"):
+    else:
         for filename in args.filenames:
             try:
                 findStringInFile(filename, args.keyword)
+                retval = 1
 
             except SyntaxError:
                 impl = platform.python_implementation()
@@ -84,9 +86,6 @@ def main(argv: Sequence[str] | None = None) -> int:
                 tb = '    ' + traceback.format_exc().replace('\n', '\n    ')
                 print(f'\n{tb}')
                 retval = 1
-    else:
-        print(f"Bad argument {args.nodiff}, propper arguments: true, false")
-        retval = 1
 
     return retval
 
