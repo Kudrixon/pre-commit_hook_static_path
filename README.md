@@ -51,7 +51,7 @@ check static path........................................................Failed
 - duration: 0.22s
 - exit code: 1
 
-Specified keyword: /home/vtest detected in file pre_commit_hooks/sample.py, line 0 content: kualalumpur("/home/vtest")
+Specified keyword: /home/vtest detected in file pre_commit_hooks/sample.py, line 1 content: kualalumpur("/home/vtest")
 ```
 
 
