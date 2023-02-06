@@ -23,6 +23,39 @@ Run this in your terminal:
 pre-commit run check-static-path
 ```
 
+Expected output if no occurrences in files:
+```
+pre-commit run check-static-path
+check static path........................................................Passed
+- hook id: check-static-path
+- duration: 0.4s
+```
+
+Expected output diff mode if string exists:
+```
+pre-commit run check-static-path
+check static path........................................................Failed
+- hook id: check-static-path
+- duration: 0.54s
+- exit code: 1
+
+Static path of /home/vtest detected in file pre_commit_hooks/sample.py, line 33 content: kualalumpur("/home/vtest"), change to 
+dynamic needed
+```
+
+Expected output no-diff mode if string exists:
+```
+pre-commit run check-static-path
+check static path........................................................Failed
+- hook id: check-static-path
+- duration: 0.54s
+- exit code: 1
+
+Static path of /home/vtest detected in file pre_commit_hooks/sample.py, line 33 content: kualalumpur("/home/vtest"), change to 
+dynamic needed
+```
+
+
 ### Parameters
 
 ***--filename***:

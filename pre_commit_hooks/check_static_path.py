@@ -45,12 +45,14 @@ def findStringInRange(filenames, keyword):
         result += findStringInRangeForFile(filename, keyword, changes_range)
     return result
 
-def findStringInFile(filename, keyword):
+def findStringInFile(filename, keyword, retval):
     with open(filename, 'r') as f:
         lines = f.readlines()
     for line_num, line in enumerate(lines):
         if keyword in line:
             print(f"Specified keyword: {keyword} detected in file {filename}, line {line_num} content: {line}")
+            retval = 1
+    return retval
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -76,8 +78,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     else:
         for filename in args.filenames:
             try:
-                findStringInFile(filename, args.keyword)
-                retval = 1
+                findStringInFile(filename, args.keyword, retval)
 
             except SyntaxError:
                 impl = platform.python_implementation()

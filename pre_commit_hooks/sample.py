@@ -29,3 +29,5 @@ witam
 szampel("/home/vtest")
 nowe("/home/vtest")
 newa("home/vtest")
+
+kualalumpur("/home/vtest")
