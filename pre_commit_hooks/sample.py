@@ -28,3 +28,4 @@ costam("home/vtest")
 witam
 szampel("/home/vtest")
 nowe("/home/vtest")
+newa("home/vtest")

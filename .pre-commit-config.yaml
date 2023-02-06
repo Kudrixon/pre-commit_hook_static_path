@@ -3,5 +3,5 @@ repos:
   rev: v1.0.15
   hooks:
     - id: check-static-path
-      args: ["-k=/home/vtest", "-nd=False"]
+      args: ["-k=/home/vtest", "-nd=false"]
       verbose: true
