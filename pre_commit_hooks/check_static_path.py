@@ -61,9 +61,9 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     retval = 0
     for filename in args.filenames:
-        print("a")
         try:
             findStringInFile(filename, args.keyword)
+            return retval
 
         except SyntaxError:
             impl = platform.python_implementation()

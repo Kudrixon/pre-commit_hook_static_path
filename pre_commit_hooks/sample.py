@@ -20,4 +20,4 @@ def func():
     "
 
 
-new("/home/vtest")
+nsew("/home/vtest")
