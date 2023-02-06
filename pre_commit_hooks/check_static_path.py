@@ -78,7 +78,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     else:
         for filename in args.filenames:
             try:
-                findStringInFile(filename, args.keyword, retval)
+                retval = findStringInFile(filename, args.keyword, retval)
 
             except SyntaxError:
                 impl = platform.python_implementation()
