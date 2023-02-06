@@ -54,6 +54,17 @@ check static path........................................................Failed
 Specified keyword: /home/vtest detected in file pre_commit_hooks/sample.py, line 1 content: kualalumpur("/home/vtest")
 ```
 
+#### Pass multiple strings to keywords parameter
+
+```
+repos:
+- repo: https://github.com/Kudrixon/pre-commit_hook_static_path
+  rev: v1.1.0
+  hooks:
+    - id: check-static-path
+      args: ['--keywords', 'for', 'if', '--nodiff', 'true', '--',]
+      verbose: true
+```
 
 ### Parameters
 
