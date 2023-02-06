@@ -48,7 +48,7 @@ def findStringInRange(filenames, keyword):
 def findStringInFile(filename, keyword, retval):
     with open(filename, 'r') as f:
         lines = f.readlines()
-    for line_num, line in enumerate(lines):
+    for line_num, line in enumerate(lines, start=1):
         if keyword in line:
             print(f"Specified keyword: {keyword} detected in file {filename}, line {line_num} content: {line}")
             retval = 1
