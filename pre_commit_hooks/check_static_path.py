@@ -57,6 +57,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*')
     parser.add_argument('-k', '--keyword', help="Static string excluded in commiting")
+    parser.add_argument('-k', '--keyword', help="Static string excluded in commiting")
+
     args = parser.parse_args(argv)
 
     print(args.filenames)
@@ -71,7 +73,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     for filename in args.filenames:
         try:
             findStringInFile(filename, args.keyword)
-            return retval
 
         except SyntaxError:
             impl = platform.python_implementation()
