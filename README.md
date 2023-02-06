@@ -2,7 +2,7 @@
 
 Pre-commit hook based on https://pre-commit.com.
 
-## Use-Case: Need to exclude spefific string from commiting to codebase
+## Use-Case: Need to exclude specific string from commiting to codebase
 
 ### Sample Usage
 
@@ -14,5 +14,7 @@ repos:
   rev: v1.0.0
   hooks:
     - id: check-static-path
-      args: ["/home/tester"]
+      args: ["-k=/home/tester"]
 ```
+
+To look for this phrase in every file that has been changed
