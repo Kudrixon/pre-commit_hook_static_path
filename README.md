@@ -66,7 +66,7 @@ repos:
       verbose: true
 ```
 
-***--*** needs to be added at the end when using this kind of syntax while providing args
+***"--"*** needs to be added at the end when using this kind of syntax while providing args
 
 ### Parameters
 
