@@ -3,6 +3,6 @@ repos:
   rev: v1.1.1-beta
   hooks:
     - id: check-static-path
-      args: ['--keywords', '/home/tester', '/home/vtest', 'home', '--nodiff', 'true', '--']
+      args: ['--keywords', '/home/tester', '/home/vtest', 'for', '--']
       verbose: true
       require_serial: true
