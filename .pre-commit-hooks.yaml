@@ -3,4 +3,4 @@
     description: check if file contains specified static path
     entry: check-static-path
     language: python
-    types: [python]
+    types: [file]
