@@ -3,7 +3,7 @@ repos:
   rev: v1.1.1-beta
   hooks:
     - id: check-static-path
-      args: ['--keywords', '/home/tester', '/home/vtest', 'if', '--']
+      args: ['--keywords', '/home/tester', '/home/vtest', 'fi', '--']
       verbose: true
       require_serial: true
       files: '.*'
