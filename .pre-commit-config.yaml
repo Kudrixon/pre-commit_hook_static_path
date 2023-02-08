@@ -5,4 +5,3 @@ repos:
     - id: check-static-path
       args: ['--keywords', '/home/tester', '/home/vtest', '--']
       verbose: true
-      require_serial: true
