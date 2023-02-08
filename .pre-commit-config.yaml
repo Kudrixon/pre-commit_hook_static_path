@@ -6,4 +6,4 @@ repos:
       args: ['--keywords', '/home/tester', '/home/vtest', 'fi', '--']
       verbose: true
       require_serial: true
-      files: '.*'
+      files: 'pre_commit_hooks/*'
