@@ -74,8 +74,9 @@ def main(argv: Union[Sequence[str], None] = None) -> int:
         results = findStringInRange(filenames, args.keywords)
         for keyword in args.keywords:
             for r in results:
-                print(f"Static path of '{keyword}' detected in file {r[0]}, line {r[1]} content: {r[2]}, change to dynamic needed")
-                retval = 1
+                if keyword in r[1]:
+                    print(f"Static path of '{keyword}' detected in file {r[0]}, line {r[1]} content: {r[2]}, change to dynamic needed")
+                    retval = 1
 
     else:
         for filename in args.filenames:
