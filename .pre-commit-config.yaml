@@ -3,7 +3,6 @@ repos:
   rev: v1.1.1-beta
   hooks:
     - id: check-static-path
-      args: ['--keywords', '/home/tester', '/home/vtest', 'fi', '--']
+      args: ['--keywords', '/home/tester', '/home/vtest', '--']
       verbose: true
       require_serial: true
-      files: 'pre_commit_hooks/*'
