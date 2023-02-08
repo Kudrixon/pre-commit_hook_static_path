@@ -70,8 +70,8 @@ repos:
 
 ### Parameters
 
-***--filename***:
-By default this pre-commit dont need You to provide filename because diff mechanism gets it by itself. When executed pre-commit mechanism gets filename parameter anyway.
+***--filenames***:
+Due to some problems with multiple calls of script [explanation](https://github.com/pre-commit/pre-commit/issues/836#issuecomment-425500142) this option can be disabled in use inside ***.pre-commit-config.yaml*** by setting ``` pass_filenames: false ```. Using By default this pre-commit dont need You to provide filename because diff mechanism gets it by itself. When executed pre-commit mechanism gets filename parameter anyway.
 
 ***--keywords, -k***:
 [REQUIRED] Provide this to find specific list of strings existing in incoming commit, or to find it in file specified by You
