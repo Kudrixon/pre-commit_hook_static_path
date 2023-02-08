@@ -57,6 +57,7 @@ def findStringInFile(filename, keywords, retval):
 
 
 def main(argv: Union[Sequence[str], None] = None) -> int:
+    print("calling main")
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*')
     parser.add_argument('-k', '--keywords', nargs='+', help='Static string excluded in commiting', required=True)
