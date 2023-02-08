@@ -6,3 +6,4 @@ repos:
       args: ['--keywords', '/home/tester', '/home/vtest', '--']
       verbose: true
       require_serial: true
+      pass_filenames: true
