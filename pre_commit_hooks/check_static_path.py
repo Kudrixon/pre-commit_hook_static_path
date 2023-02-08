@@ -4,7 +4,7 @@ import sys
 import platform
 import traceback
 import argparse
-from typing import Sequence
+from typing import Sequence, Union
 
 pattern = r'^\+\+\+ ./(.*)|^@@ -[0-9]+(,[0-9]+)? \+(.*)(?= @@)'
 
@@ -55,7 +55,7 @@ def findStringInFile(filename, keyword, retval):
     return retval
 
 
-def main(argv: Sequence[str] | None = None) -> int:
+def main(argv: Union[Sequence[str], None] = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*')
     parser.add_argument('-k', '--keyword', help='Static string excluded in commiting', required=True)
