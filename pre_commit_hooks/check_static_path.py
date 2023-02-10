@@ -67,7 +67,7 @@ def main(argv: Union[Sequence[str], None] = None) -> int:
     retval = 0
 
     if(args.nodiff == "false"):
-        text = subprocess.run(['git', 'diff', "--unified=0", 'HEAD'], capture_output=True, text=True).stdout
+        text = subprocess.run(['git', 'diff', "--unified=0", 'HEAD'], stdout=subprocess.PIPE, text=True).stdout
         matches = extractMatches(text, pattern)
         filenames = [match.replace("+++ b/", "") for match in matches if match.startswith("+++ b/")]
         filenames = [filename for filename in filenames if filename is not None]
