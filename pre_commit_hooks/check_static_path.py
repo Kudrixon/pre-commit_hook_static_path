@@ -72,7 +72,9 @@ def main(argv: Union[Sequence[str], None] = None) -> int:
         filenames = [match.replace("+++ b/", "") for match in matches if match.startswith("+++ b/")]
         filenames = [filename for filename in filenames if filename is not None]
         results = findStringInRange(filenames, args.keywords)
-        print(f"Forbidden static strings: {args.keywords}\n")
+        if results:
+            print(f"Forbidden static strings: {args.keywords}\n")
+            
         for r in results:
             print(f"Static path detected in file {r[0]}, line {r[1]} content: {r[2]}, change to dynamic needed")
             retval = 1
