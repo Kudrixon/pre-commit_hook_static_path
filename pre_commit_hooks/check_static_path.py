@@ -30,7 +30,7 @@ def findStringInRangeForFile(filename, keywords, changes_range):
 def findStringInRange(filenames, keywords):
     results = []
     for filename in filenames:
-        text = subprocess.run(['git', 'diff', "--unified=0", 'HEAD', filename], capture_output=True, text=True).stdout
+        text = subprocess.check_output(['git', 'diff', "--unified=0", 'HEAD', filename], universal_newlines=True)
         matches = extractMatches(text, pattern)
         changes_range = []
         for s in matches:
