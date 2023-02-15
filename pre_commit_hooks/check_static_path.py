@@ -1,4 +1,5 @@
 import re
+import os
 import subprocess
 import sys
 import platform
@@ -19,6 +20,9 @@ def extractMatches(text, pattern):
 
 def findStringInRangeForFile(filename, keywords, changes_range):
     results = []
+    if os.path.isdir(filename):
+    # Skip the directory and move on to the next file
+        return results
     with open(filename, "r") as f:
         lines = f.readlines()
         for i, line in enumerate(lines):
@@ -46,6 +50,8 @@ def findStringInRange(filenames, keywords):
     return results
 
 def findStringInFile(filename, keywords, retval):
+    if os.path.isdir(filename):
+        return retval
     with open(filename, 'r') as f:
         lines = f.readlines()
     for line_num, line in enumerate(lines, start=1):
